@@ -3,7 +3,7 @@ class Class < ActiveHash::Base
     { id: 1, name: '---'},
     { id: 2, name: 'お弁当向け'},
     { id: 3, name: '食卓向け'},
-    { id: 4, name: '食材・おやつ'}
+    { id: 4, name: '食材・スイーツ'}
 
   ]
 end
