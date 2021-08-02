@@ -6,10 +6,12 @@ class Category < ActiveHash::Base
     { id: 4, name: 'カップ'},
     { id: 5, name: 'コロッケ'},
     { id: 6, name: '米飯'},
-    { id: 7, name: 'ピザ'},
-    { id: 8, name: 'グラタン・ドリア'},
-    { id: 9, name: '食材'},
-    { id: 10, name: 'スイーツ'}
+    { id: 7, name: '麺類'},
+    { id: 8, name: 'お惣菜'},
+    { id: 9, name: 'ピザ'},
+    { id: 10, name: 'グラタン・ドリア'},
+    { id: 11, name: '食材'},
+    { id: 12, name: 'スイーツ'}
   ]
 
   include ActiveHash::Associations

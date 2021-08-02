@@ -1,0 +1,15 @@
+<% @product1.each do |product1| %>
+  <div class='list'>
+    <div class='product-img-content'>
+    <%= link_to image_tag(product1.image, class: :product_img ), product_path(product1.id)%>
+    </div>
+    <div class='product-info'>
+      <h3 class='product-name'>
+        <%= product1.product_name %>
+      </h3>
+      <div class='product-company'>
+        <span><%= product1.company.name %></span>
+      </div>
+    </div>
+  </div>
+<% end %>
