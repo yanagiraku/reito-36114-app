@@ -1,4 +1,4 @@
-class CookingMethod < ActiveHash::Base
+class CookingMethod2 < ActiveHash::Base
   self.data = [
     { id: 1, name: '---'},
     { id: 2, name: 'レンジ調理'},

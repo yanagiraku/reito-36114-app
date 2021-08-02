@@ -1,27 +1,28 @@
 <h1>Reito</h1>
 <h2>商品一覧</h2>
+<li><%= link_to "商品登録", new_product_path, class: "product-registration"%></li>
 
 <div class="three-classes">
   <h3 class="class-text">お弁当向け</h3>
   <ul class="mix-class">
-    <li><%= links_to "肉系", meat_products_path %></li>
-    <li><%= links_to "魚系", fish_products_path %></li>
-    <li><%= links_to "カップ", cup_products_path %></li>
-    <li><%= links_to "コロッケ", croquette_products_path %></li>
+    <li><%= link_to "肉系", meat_products_path %></li>
+    <li><%= link_to "魚系", fish_products_path %></li>
+    <li><%= link_to "カップ", cup_products_path %></li>
+    <li><%= link_to "コロッケ", croquette_products_path %></li>
   </ul>
   
   <h3 class="class-text">食卓向け</h3>
   <ul class="mix-class">
-    <li><%= links_to "米飯", rice_products_path %></li>
-    <li><%= links_to "麺類", noodle_products_path %></li>
-    <li><%= links_to "お惣菜", side_products_path %></li>
-    <li><%= links_to "ピザ", pizza_products_path %></li>
-    <li><%= links_to "グラタン・ドリア", gratin_products_path %></li>
+    <li><%= link_to "米飯", rice_products_path %></li>
+    <li><%= link_to "麺類", noodle_products_path %></li>
+    <li><%= link_to "お惣菜", side_products_path %></li>
+    <li><%= link_to "ピザ", pizza_products_path %></li>
+    <li><%= link_to "グラタン・ドリア", gratin_products_path %></li>
   </ul>
 
   <h3 class="class-text">食材・デザート</h3>
   <ul class="mix-class">
-    <li><%= links_to "食材", foodstuff_products_path %></li>
-    <li><%= links_to "スイーツ", sweets_products_path %></li>
+    <li><%= link_to "食材", foodstuff_products_path %></li>
+    <li><%= link_to "スイーツ", sweets_products_path %></li>
   </ul>
 </div>
