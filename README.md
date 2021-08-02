@@ -13,14 +13,15 @@ has_many :reviews
 
 
 ## productsテーブル
-| Column                 | Type    | Options    |
-| ---------------------- | ------- | ---------- |
-| product_name           | string  | null:false |
-| product_num            | string  | null:false |
-| product_detail         | text    | null:false |
-| product_class_id       | integer | null:false |
-| product_category_id    | integer | null:false |
-| product_cooking_method | integer | null:false |
+| Column                    | Type    | Options    |
+| ------------------------- | ------- | ---------- |
+| product_name              | string  | null:false |
+| product_num               | string  | null:false |
+| description               | text    | null:false |
+| genre_id                  | integer | null:false |
+| category_id               | integer | null:false |
+| cooking_method_id         | integer | null:false |
+| company_id                | integer | null:false |
 
 ### Association
 has_many :reviews
