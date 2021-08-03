@@ -3,10 +3,9 @@
     <div class="product-img-content">
       <%= image_tag @product.image ,class:"product-box-img" %>
     </div>
-
     <div class="product-name-box">
       <%= @product.product_name %>
-      <%=@product.company %>
+      <%= @product.company.name %>
     </div>
 
     <%# <div class="edit-desroy-btn">
