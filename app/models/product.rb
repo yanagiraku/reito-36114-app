@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   has_one_attached :image
+  has_many :reviews
   
   with_options presence: true do
     validates :product_name

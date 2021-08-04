@@ -10,4 +10,5 @@ class User < ApplicationRecord
     validates :nickname
     validates :age,           format: { with: /\A[0-9]+\z/ }
   end
+  has_many :reviews
 end

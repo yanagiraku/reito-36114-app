@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "homes#index"
-  resources :products, only: [:index, :new, :create, :show] do
+  resources :products do
     collection do
       get 'meat'
       get 'fish'
@@ -14,9 +14,7 @@ Rails.application.routes.draw do
       get 'gratin'
       get 'foodstuff'
       get 'sweets'
-
     end
-
   end
-
+  resources :reviews
 end

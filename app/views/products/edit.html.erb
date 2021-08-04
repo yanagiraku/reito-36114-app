@@ -1,0 +1,68 @@
+<h1>編集</h1>
+
+<%= form_with model: @product, class: "product-main", local: true do |f| %>
+<div class="product-form">
+  <div class="img-upload">
+    <label class="img-text">商品画像</label>
+    <div class="click-upload">
+      <p>
+        クリックしてファイルをアップロード
+      </p>
+      <%= f.file_field :image, id: "product-image"%>
+    </div>
+  </div>
+
+  <div class= "product-form-group">
+    <div class='product-text-wrap'>
+      <label class="product-text">商品番号</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :product_num, class:"input-default", id:"product_num", placeholder:"例）1" %>
+
+    <div class='product-text-wrap'>
+      <label class="product-text">商品名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :product_name, class:"input-default", id:"product_name", placeholder:"例)本格炒めチャーハン" %>
+
+    <div class='product-text-wrap'>
+      <label class="product-text">会社名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:company_id, Company.all, :id, :name, {class:"select-box", id:"company"}) %>
+
+    <div class='product-text-wrap'>
+      <label class="product-text">商品説明</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :description, class:"input-default", id:"description", placeholder:"例)オーナーシェフ直伝の「◯◯製法」を実現" %>
+
+    <div class='product-text-wrap'>
+      <label class="product-text">ジャンル</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:ganre_id, Ganre.all, :id, :name, {class:"select-box", id:"ganre"}) %>
+
+    <div class='product-text-wrap'>
+      <label class="product-text">カテゴリー</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {class:"select-box", id:"category"}) %>
+
+    <div class='product-text-wrap'>
+      <label class="product-text">調理方法</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:cooking_method_id, CookingMethod.all, :id, :name, {class:"select-box", id:"cooking-method"}) %>
+    <%= f.collection_select(:cooking_method2_id, CookingMethod2.all, :id, :name, {class:"select-box", id:"cooking-method2"}) %>
+  </div>
+
+  <div class="entry-btn-contents">
+    <%= f.submit "登録する" ,class:"entry-btn" %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+</div>
+
+</div>
+<%end%>
+
