@@ -16,5 +16,5 @@ Rails.application.routes.draw do
       get 'sweets'
     end
   end
-  resources :reviews
+  resources :reviews, only: [:new, :create]
 end
