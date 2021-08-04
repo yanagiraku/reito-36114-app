@@ -3,16 +3,14 @@
     <div class="product-img-content">
       <%= image_tag @product.image ,class:"product-box-img" %>
     </div>
+    <ul class ="change-btn">
+        <li><%= link_to "編集", edit_product_path, method: :get, class: "edit-btn"%></li> 
+        <li><%= link_to "削除", product_path(@product.id), method: :delete, class: "delete-btn"%></li> 
+    </ul>
     <div class="product-name-box">
       <%= @product.product_name %>
       <%= @product.company.name %>
     </div>
-
-    <%# <div class="edit-desroy-btn">
-      <%= link_to "商品の編集", edit_product_path, method: :get, class: "product-red-btn" %>
-      <%# <p class="or-text">or</p>
-      <%= link_to "削除", product_path(@product.id), method: :delete, class:"product-destroy" %>
-    <%# </div> %> 
 
     <div class="product-explain-box">
       <span><%= @product.description %></span>

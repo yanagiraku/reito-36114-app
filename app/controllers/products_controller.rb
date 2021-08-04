@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-before_action :set_product, only:[:show, :fish, :cup, :croquette, :rice, :noodle, :side, :pizza, :gratin, :foodstuff, :sweets]
+before_action :set_product, only: [:edit, :update, :destroy]
 
   def index
     @products = Product.all
@@ -20,12 +20,34 @@ before_action :set_product, only:[:show, :fish, :cup, :croquette, :rice, :noodle
   end
 
   def show
+    @product = Product.where(params[:id])
+    @product = Product.find(params[:id])
+  end 
+
+  def edit
+  end
+
+  def update
+    if @product.update(product_params)
+      redirect_to product_path(@product.id)
+    else
+      render :edit
+    end
 
   end
 
+  def destroy
+    if @product.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
   def meat
+
     @product1 = Product.where(category_id:2)
-    @product = Product.find_by(category_id:2)
+
   end
 
   def fish
@@ -76,10 +98,8 @@ before_action :set_product, only:[:show, :fish, :cup, :croquette, :rice, :noodle
   end
 
   def set_product
-    @product = Product.find_by(params[:id])
+    @product = Product.find(params[:id])
   end
-
-
 
 
 end

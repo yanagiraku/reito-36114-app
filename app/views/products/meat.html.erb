@@ -1,9 +1,8 @@
 
 <% @product1.each do |product| %>
-  <div class='list'>
-    <div class='product-img-content'>
-      <%= link_to image_tag(product.image), class: "product-img" %>
-    </div>
+  <div class='product-content'>
+    <%= link_to product_path(product.id), class: "product-img" do %>
+    <%= image_tag product.image, class: "product-img" %>
     <div class='product-info'>
       <h3 class='product-name'>
         <%= product.product_name %>
@@ -12,10 +11,8 @@
         <span><%= product.company.name %></span>
       </div>
     </div>
-    <div class= "read-more">
-      <%=link_to "もっと見る", product_path(@product.id) %>
-    </div>
+    <%end %>
   </div>
-<% end %>
+<%end%>
 
 
