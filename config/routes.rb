@@ -16,4 +16,5 @@ Rails.application.routes.draw do
       get 'sweets'
     end
   end
+  resources :reviews
 end

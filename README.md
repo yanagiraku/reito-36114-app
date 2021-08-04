@@ -31,7 +31,7 @@ has_many :reviews
 | Column             | Type       | Options                      |
 | ------------------ | ---------- | ---------------------------- |
 | title              | string     | Options                      |
-| created_at         | date       | null:false                   |
+| created_day        | date       | null:false                   |
 | recommend_score_id | integer    | null:false                   |
 | comment            | text       |                              |
 | user_id            | references | null:false,foreign_key: true |
