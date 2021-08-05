@@ -1,11 +1,14 @@
+<%=link_to "Reito", root_path, class: "main-title"%>
 <div class="product-show">
   <div class="product-box">
     <div class="product-img-content">
       <%= image_tag @product.image ,class:"product-box-img" %>
     </div>
     <ul class ="change-btn">
+      <% if current_user&.admin? %>
         <li><%= link_to "編集", edit_product_path, method: :get, class: "edit-btn"%></li> 
         <li><%= link_to "削除", product_path(@product.id), method: :delete, class: "delete-btn"%></li> 
+      <%end%>
     </ul>
     <div class="product-name-box">
       <%= @product.product_name %>

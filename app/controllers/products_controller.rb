@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-before_action :set_product, only: [:edit, :update, :destroy]
+  before_action :admin_check, only: [:new, :create, :edit, :destroy]
+  before_action :set_product, only: [:edit, :update, :destroy]
 
   def index
     @products = Product.all
@@ -99,6 +100,13 @@ before_action :set_product, only: [:edit, :update, :destroy]
 
   def set_product
     @product = Product.find(params[:id])
+  end
+
+  def admin_check
+    unless current_user&.admin?
+      redirect_to products_path
+    end
+
   end
 
 
