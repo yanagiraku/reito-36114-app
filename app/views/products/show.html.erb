@@ -30,20 +30,8 @@
 
   </div>
 
-  <%# <div class="comment-box">
-    <form>
-      <button type="submit" class="comment-btn">
-        <span>口コミ投稿<span>
-      </button>
-    </form>
-  </div> %>
-  <%# <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の商品
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの商品 ＞
-    </a>
-  </div> %>
-  <%# <a href="#" class="another-item"><%= @product.category.name %>をもっと見る</a> %>
+  <div class="review-box">
+    <%= link_to "口コミ投稿", new_product_review_path(@product.id), class: "review-text" %>
+  </div>
+  <%= link_to "#{@product.category.name}をもっと見る", :back,  class: "another-products"%>
 </div>
