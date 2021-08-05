@@ -1,6 +1,11 @@
 class ReviewsController < ApplicationController
   before_action :set_item, only:[:new, :create]
 
+
+  def index
+    @reviews = Review.all
+  end
+
   def new
     @review = Review.new
   end
@@ -8,11 +13,48 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
-      redirect_to "/product/#{review.product.id}"
+      redirect_to root_path
     else
       render :new
     end
   end
+
+  def meat
+
+
+  end
+
+  def fish
+  end
+
+  def cup
+  end
+
+  def croquette
+  end
+
+  def rice
+  end
+
+  def noodle
+  end
+
+  def side
+  end
+
+  def pizza
+  end
+
+  def gratin
+  end
+
+  def foodstuff
+  end
+
+  def sweets
+  end
+
+
 
 
 

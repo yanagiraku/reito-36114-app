@@ -6,7 +6,6 @@ class Review < ApplicationRecord
   
   with_options presence: true do
     validates :title
-    validates :created_day
     validates :comment
   end
 

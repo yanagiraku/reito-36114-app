@@ -1,0 +1,42 @@
+<%=link_to "Reito", root_path, class: "main-title"%>
+
+<h2>ユーザー詳細</h2>
+
+<div class="user-detail">
+  <h2 class="head-message">
+    <%= "#{@user.nickname}さんの情報"%>
+  </h2>
+  <div class="user-table">
+    <table class="page-main">
+      <tr>
+        <td class="table__col1">ニックネーム</td>
+        <td class="table__col2"><%=@user.nickname%></td>
+      </tr>
+      <tr>
+        <td class="table__col3">メールアドレス</td>
+        <td class="table__col4"><%=@user.email%></td>
+      </tr>
+      <tr>
+        <td class="table_col5">年齢</td>
+        <td class="table__col6"><%="#{@user.age}歳"%></td>
+      </tr>
+    </table>
+  </div>
+  <div class="review-table">
+    <h2 class="head-message">
+      <%= "#{@user.nickname}さんの口コミ一覧"%>
+    </h2>
+    <div class="review-lists">
+      <%= image_tag(@product.image, class: :card__img )%>
+      <%= @product.product_name class: "product-name"%>
+      <div class="list__body">
+        <%= @review.title, class: :card__title%>
+        <%= @review.created_day %>
+        <p class="list__summary">
+          <%= @review.comment %>
+        </p>
+        <%= "by #{@review.user.nickname}", class: :card__user%>
+      </div>
+    </div>
+  </div>
+</div>
