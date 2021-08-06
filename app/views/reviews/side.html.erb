@@ -1,0 +1,19 @@
+<h2>お惣菜</h2>
+
+<% @review10.each do |review| %>
+  <div class='review-content'>
+    <%= image_tag review.product.image, class: "product-img" %>
+    <div class='product-info'>
+      <h3 class='product-name'>
+        <%= review.product.product_name %>
+      </h3>
+    </div>
+    <ul class="review-info">
+      <li><%=review.user.nickname%></li>
+      <li><%=review.created_on%></li>
+      <li><%=review.title%></li>
+    </ul>
+  </div>
+<%end%>
+
+

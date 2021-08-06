@@ -12,6 +12,9 @@
   </div>
 
 <%= form_with(model: [@product, @review], url: product_reviews_path(@product), class: "review-main", local: true) do |f|%>
+<div class="hidden-category">
+  <%= f.collection_select(:category_id, Category.all, :id, :name,{selected: @product.category_id},{class:"select-box", id:"category_id"})%>
+</div>
 <div class="review-form">
   <div class="review-text-wrap">
     <label class="review-text">タイトル</label>

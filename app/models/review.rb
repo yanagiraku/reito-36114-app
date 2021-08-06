@@ -11,4 +11,5 @@ class Review < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :recommend_score
+  belongs_to_active_hash :category
 end

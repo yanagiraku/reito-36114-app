@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2021_08_05_034210) do
     t.text "comment", null: false
     t.bigint "user_id"
     t.bigint "product_id"
+    t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["product_id"], name: "index_reviews_on_product_id"
