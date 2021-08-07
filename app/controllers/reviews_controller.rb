@@ -1,10 +1,8 @@
 class ReviewsController < ApplicationController
-  before_action :set_product_one, only:[:new, :create]
-  before_action :set_product_category, except:[:index, :new, :create]
+  before_action :set_product, only:[:new, :create]
 
 
   def index
-    @reviews = Review.all
   end
 
   def new
@@ -18,6 +16,12 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @product = Product.where(params[:id])
+    @product = Product.find(params[:id])
+    @review = Review.find(params[:id])
   end
 
   def meat
@@ -76,12 +80,9 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:title, :created_day, :recommend_score_id, :comment, :category_id).merge(user_id: current_user.id, product_id: params[:product_id])
   end
 
-  def set_product_one
-    @product = Product.find(params[:product_id])
-  end
 
-  def set_product_category
-  @product1 = Product.where(category_id:2)
+  def set_product
+    @product = Product.find(params[:product_id])
   end
 
 

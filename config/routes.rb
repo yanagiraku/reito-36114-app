@@ -17,9 +17,8 @@ Rails.application.routes.draw do
       get 'foodstuff'
       get 'sweets'
     end
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:new, :create, :show] 
   end
-
   resources :reviews, only: [:index] do
     collection do
       get 'meat'
@@ -35,6 +34,9 @@ Rails.application.routes.draw do
       get 'sweets'
     end
   end
+
+
+
 
 
 end

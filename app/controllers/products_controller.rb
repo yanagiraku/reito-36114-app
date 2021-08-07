@@ -47,6 +47,7 @@ class ProductsController < ApplicationController
 
   def meat
     @product1 = Product.where(category_id:2)
+
   end
 
   def fish

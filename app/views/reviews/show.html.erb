@@ -1,0 +1,19 @@
+<%= link_to "Reito", root_path, class: "main-title" %>
+
+<div class="review-show">
+  <div class="review-product-box">
+    <%= image_tag @review.product.image, class: "review-box-image" %>
+    <ul class="product-imformation">
+      <li><%= @review.product.product_name %></li>
+      <li><%= @review.product.company.name %></li>
+    </ul>
+  </div>
+  <div class="review-box">
+    <ul class="review-imformation">
+      <li><%= @review.title %></li>
+      <li><%= @review.user.nickname%></li>
+      <li><%= @review.recommend_score.name %></li>
+      <li><%= @review.comment %></li>
+    </ul>
+  </div>
+</div>
