@@ -20,7 +20,7 @@ class ReviewsController < ApplicationController
 
   def show
     @product = Product.where(params[:id])
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
   end
 
@@ -39,6 +39,7 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    @review = Review.find(params[:id])
     if @review.destroy
       redirect_to root_path
     else

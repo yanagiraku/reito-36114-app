@@ -1,6 +1,6 @@
 <%= link_to "Reito", root_path, class: "main-title" %>
 
-<% @product9.each do |product9| %>
+<% @product9.each do |product| %>
   <div class='list'>
     <%= link_to product_path(product.id) do %>
     <%= image_tag product.image, class: "product-img" %>

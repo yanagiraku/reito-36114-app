@@ -2,7 +2,7 @@
 
 <% @review3.each do |review| %>
   <div class='review-content'>
-    <%= link_to product_review_path(@product) do%>
+    <%= link_to product_review_path(id: review.id, product_id: review.product.id) do%>
     <%= image_tag review.product.image, class: "product-img" %>
     <div class='product-info'>
       <h3 class='product-name'>
@@ -11,10 +11,11 @@
     </div>
     <ul class="review-info">
       <li><%=review.title%></li>
+      <li><%=review.recommend_score.name%></li>
+    <%end%>
       <li><%="by#{review.user.nickname}"%></li>
       <li><%=review.created_on%></li>
     </ul>
-    <%end%>
   </div>
 <%end%>
 
