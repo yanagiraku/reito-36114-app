@@ -1,5 +1,11 @@
 <%= link_to "Reito", root_path, class: "main-title" %>
 
+<ul class ="change-btn">
+  <% if current_user.id == @review.user_id %>
+    <li><%= link_to "編集", edit_product_review_path(id: @review.id, product_id: @review.product.id), method: :get, class: "edit-btn"%></li> 
+    <li><%= link_to "削除", product_review_path(product_id: @product.id), method: :delete, class: "delete-btn"%></li> 
+  <%end%>
+</ul>
 <div class="review-show">
   <div class="review-product-box">
     <%= image_tag @review.product.image, class: "review-box-image" %>

@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_product, only:[:new, :create]
+  before_action :set_product, only:[:new, :create, :edit, :update, :destroy]
 
 
   def index
@@ -22,6 +22,29 @@ class ReviewsController < ApplicationController
     @product = Product.where(params[:id])
     @product = Product.find(params[:id])
     @review = Review.find(params[:id])
+  end
+
+  def edit
+    @review = Review.find(params[:id])
+  end
+
+  def update
+    @review = Review.find(params[:id])
+    if @review.update(review_params)
+      redirect_to product_path(@product.id)
+    else
+      render :edit
+    end
+
+  end
+
+  def destroy
+    if @review.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+
   end
 
   def meat
@@ -83,6 +106,7 @@ class ReviewsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:product_id])
+
   end
 
 

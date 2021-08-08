@@ -17,7 +17,7 @@ Rails.application.routes.draw do
       get 'foodstuff'
       get 'sweets'
     end
-    resources :reviews, only: [:new, :create, :show] 
+    resources :reviews, only: [:new, :create, :show, :edit, :update, :destroy] 
   end
   resources :reviews, only: [:index] do
     collection do
