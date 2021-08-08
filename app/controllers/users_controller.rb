@@ -4,7 +4,6 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     @review = Review.where(user_id:current_user.id)
 
-
   end
 
   private
