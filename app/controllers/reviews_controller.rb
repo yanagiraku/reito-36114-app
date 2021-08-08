@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, only:[:new, :create, :edit, :destroy]
+  before_action :move_to_index, only: [:edit, :update, :destroy]
   before_action :set_product, only:[:new, :create, :edit, :update, :destroy]
 
 
@@ -102,6 +104,13 @@ class ReviewsController < ApplicationController
   
   def review_params
     params.require(:review).permit(:title, :created_day, :recommend_score_id, :comment, :category_id).merge(user_id: current_user.id, product_id: params[:product_id])
+  end
+
+  def move_to_index
+    @review = Review.find(params[:id])
+    unless current_user.id == @review.user_id
+      redirect_to root_path
+    end
   end
 
 
