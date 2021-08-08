@@ -6,7 +6,7 @@
     </div>
     <ul class ="change-btn">
       <% if current_user&.admin? %>
-        <li><%= link_to "編集", edit_product_path, method: :get, class: "edit-btn"%></li> 
+        <li><%= link_to "編集", edit_product_path(@product.id), method: :get, class: "edit-btn"%></li> 
         <li><%= link_to "削除", product_path(@product.id), method: :delete, class: "delete-btn"%></li> 
       <%end%>
     </ul>
@@ -34,7 +34,7 @@
   </div>
 
   <div class="review-box">
-    <%= link_to "口コミ投稿", new_product_review_path(@product.id), class: "review-text" %>
+    <%= link_to "口コミ投稿", new_product_review_path(product_id: @product.id), class: "review-text" %>
   </div>
   <%= link_to "#{@product.category.name}をもっと見る", :back,  class: "another-products"%>
 </div>

@@ -1,0 +1,25 @@
+<%= link_to "Reito", root_path, class: "main-title" %>
+
+<ul class ="change-btn">
+  <% if current_user.id == @review.user_id %>
+    <li><%= link_to "編集", edit_product_review_path(id: @review.id, product_id: @review.product.id), method: :get, class: "edit-btn"%></li> 
+    <li><%= link_to "削除", product_review_path(id: @review.id, product_id: @review.product.id), method: :delete, class: "delete-btn"%></li> 
+  <%end%>
+</ul>
+<div class="review-show">
+  <div class="review-product-box">
+    <%= image_tag @review.product.image, class: "review-box-image" %>
+    <ul class="product-imformation">
+      <li><%= @review.product.product_name %></li>
+      <li><%= @review.product.company.name %></li>
+    </ul>
+  </div>
+  <div class="review-box">
+    <ul class="review-imformation">
+      <li><%= @review.title %></li>
+      <li><%= @review.user.nickname%></li>
+      <li><%= @review.recommend_score.name %></li>
+      <li><%= @review.comment %></li>
+    </ul>
+  </div>
+</div>

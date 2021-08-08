@@ -1,0 +1,45 @@
+<%=link_to "Reito", root_path, class: "main-title"%>
+
+<h2>ユーザー詳細</h2>
+
+<div class="user-detail">
+  <h2 class="head-message">
+    <%= "#{current_user.nickname}さんの情報"%>
+  </h2>
+  <div class="user-table">
+    <table class="page-main">
+      <tr>
+        <td class="table__col1">ニックネーム</td>
+        <td class="table__col2"><%=current_user.nickname%></td>
+      </tr>
+      <tr>
+        <td class="table__col3">メールアドレス</td>
+        <td class="table__col4"><%=current_user.email%></td>
+      </tr>
+      <tr>
+        <td class="table_col5">年齢</td>
+        <td class="table__col6"><%="#{current_user.age}歳"%></td>
+      </tr>
+    </table>
+  </div>
+  <div class="review-table">
+    <h2 class="head-message">
+      <%= "#{current_user.nickname}さんの口コミ一覧"%>
+    </h2>
+    <% @review.each do |review| %>
+      <div class="review-lists">
+      <%= link_to product_review_path(id: review.id, product_id: review.product.id) do%>
+        <div class="review-product-imfo">
+          <%= image_tag review.product.image,class: "product-img"%>
+          <%= review.product.product_name %>
+        </div>
+        <div class="review-imfo">
+          <div class="review-title"><%=review.title%></div>
+          <div class="review-created-day"><%= review.created_on%></div>
+          <div class="review-comment"> <%= review.comment%></div>
+        </div>
+      <%end%>
+      </div>
+    <% end %>
+  </div>
+</div>

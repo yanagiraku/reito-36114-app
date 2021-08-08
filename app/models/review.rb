@@ -6,10 +6,10 @@ class Review < ApplicationRecord
   
   with_options presence: true do
     validates :title
-    validates :created_day
     validates :comment
   end
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :recommend_score
+  belongs_to_active_hash :category
 end

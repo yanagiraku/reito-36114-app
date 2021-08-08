@@ -46,7 +46,6 @@ class ProductsController < ApplicationController
   end
 
   def meat
-
     @product1 = Product.where(category_id:2)
 
   end
@@ -106,7 +105,6 @@ class ProductsController < ApplicationController
     unless current_user&.admin?
       redirect_to products_path
     end
-
   end
 
 
