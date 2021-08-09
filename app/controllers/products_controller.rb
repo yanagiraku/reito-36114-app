@@ -94,7 +94,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:image, :product_name, :product_num, :description, :ganre_id, :category_id, :cooking_method_id, :cooking_method2_id, :company_id)
+    params.require(:product).permit(:image, :product_name, :description, :ganre_id, :category_id, :cooking_method_id, :cooking_method2_id, :company_id)
   end
 
   def set_product
