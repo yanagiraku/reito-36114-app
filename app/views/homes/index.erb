@@ -1,19 +1,33 @@
-<h1>ホーム</h1>
-<ul class=nav>
-  <% if user_signed_in? %>
-    <li><%= link_to'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-    <li><%= link_to'マイページ', user_path(current_user.id), class: "my-page"%></li>
-
-  <%else%>
-    <li><%= link_to'ログイン', new_user_session_path, class: "login" %></li>
-    <li><%= link_to'新規登録', new_user_registration_path, class: "sign-up" %></li>
-  <%end%>
-</ul>
-
-<%= link_to products_path do%>
-  <button class="product-category-btn">商品一覧</button>
-<%end%>
-
-<%= link_to reviews_path do%>
-  <button class="review-category-btn">口コミ一覧</button>
-<%end%>
+<div class="top-page">
+  <header class='top-page-header'>
+    <div class="list-left">
+      <%= image_tag("reito-app-icon.png", class:"reito-icon") %>
+    </div>
+    <ul class=list-right>
+      <% if user_signed_in? %>
+        <li><%= link_to'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+        <li><%= link_to'マイページ', user_path(current_user.id), class: "my-page"%></li>
+      <%else%>
+        <li><%= link_to'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to'新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <%end%>
+    </ul>
+  </header>
+  <body class="top-page-body">
+    <div class="center-image">
+      <div class="center-second-border">
+        <%=image_tag("3ren-obentou.jpeg", class:"reito-image")%>
+        <div class="reito-app-description">
+          <div class="reito-title">
+            <%= image_tag("reito-title-full2.png", class:"reito-title-full")%>
+          </div>
+          <div class="reito-app-detail"></div>
+        </div>
+      </div>
+    </div>
+    <ul class="category-list">
+      <li><%= link_to '商品一覧', products_path, class:"review-category-btn" %></li>
+      <li><%= link_to '口コミ一覧', reviews_path, class:"review-category-btn" %></li>
+    </ul>
+  </body>
+</div>

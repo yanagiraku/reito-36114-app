@@ -1,4 +1,4 @@
-<%=link_to "Reito", root_path, class: "main-title"%>
+<%= render partial: "shared/header" %>
 
 <%= form_with model: @product, url: products_path, class: "product-main", local: true do |f| %>
 <div class="product-form">

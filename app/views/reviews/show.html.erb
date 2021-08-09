@@ -1,4 +1,4 @@
-<%= link_to "Reito", root_path, class: "main-title" %>
+<%= render partial: "shared/header" %>
 
 <ul class ="change-btn">
   <% if current_user.id == @review.user_id %>
