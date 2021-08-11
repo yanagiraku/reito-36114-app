@@ -8,7 +8,7 @@
         <li><%= link_to'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
         <li><%= link_to'マイページ', user_path(current_user.id), class: "my-page"%></li>
       <%else%>
-        <li><%= link_to'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to'ログイン', new_user_session_path, class: "log-in" %></li>
         <li><%= link_to'新規登録', new_user_registration_path, class: "sign-up" %></li>
       <%end%>
     </ul>
@@ -16,17 +16,18 @@
   <body class="top-page-body">
     <div class="center-image">
       <div class="center-second-border">
-        <%=image_tag("3ren-obentou.jpeg", class:"reito-image")%>
+        <%=image_tag("yuubin-tegami.png", class:"reito-image")%>
         <div class="reito-app-description">
           <div class="reito-title">
-            <%= image_tag("reito-title-full2.png", class:"reito-title-full")%>
+            <%= image_tag("reito-shokuhin.png", class:"reito-shokuhin")%>
+            <%= image_tag("nokutikomi.png", class:"nokutikomi") %>
           </div>
           <div class="reito-app-detail"></div>
         </div>
       </div>
     </div>
     <ul class="category-list">
-      <li><%= link_to '商品一覧', products_path, class:"review-category-btn" %></li>
+      <li><%= link_to '商品一覧', products_path, class:"product-category-btn" %></li>
       <li><%= link_to '口コミ一覧', reviews_path, class:"review-category-btn" %></li>
     </ul>
   </body>
