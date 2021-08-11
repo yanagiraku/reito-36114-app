@@ -1,0 +1,82 @@
+.simple-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.7em 0;
+  border-bottom: dotted 5px #770000;
+  padding: 0 0 0.8em 0;
+  font-family: 'Kiwi Maru', serif;
+}
+.session-title-box {
+  display: flex;
+}
+.session-title {
+  color: 	#770000;
+  margin: 0 0 0 0.3em;
+  font-family: 'Kiwi Maru', serif;
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.line-image {
+  width: 1.9em;
+  height: 2.6em;
+  margin-left: 1em;
+}
+
+.form-wrap {
+  margin: 2em;
+  font-family: 'Kiwi Maru', serif;
+}
+
+/* .form-group {
+
+} */
+.form-text-wrap {
+  margin-top: 2em;
+
+}
+.form-text{
+  font-size: larger;
+  color: #770000;
+}
+
+.indispensable {
+  padding: 0.1em 0.1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: #770000;
+  background: #FFF;
+  border: solid 2px #770000;
+  border-radius: 3px;
+}
+.indispensable p {
+  margin: 0; 
+  padding: 0;
+} 
+
+
+.input-form {
+  width: 25em;
+  height: 2em;
+  border-style: none;
+  background-color: rgb(232, 240, 254);
+  margin: 1em 0;
+}
+.login-red-btn{
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #770000;
+  background-color: white;
+  border-left: double 7px #770000;
+  border-right: double 7px #770000;
+}
+.login-red-btn p {
+  margin: 0; 
+  padding: 0;
+}
+.sign-up {
+  margin: 14em 1em;
+  width: 4em;
+}
+
