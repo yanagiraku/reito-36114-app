@@ -1,0 +1,84 @@
+.new-review-lists {
+  background-image:url('https://photoshopvip.net/wp-content/uploads/2012/07/21usefultexture.jpg'); 
+  background-repeat: repeat;
+  margin-bottom: 4em;
+}
+
+.new-review-second-lists {
+  margin: 2em 0 0 27em;
+  border: 4px solid #000066;
+  height: 70em;
+  width: 35em;
+}
+
+.new-review-title {
+  margin: 0.9em 0 0 0.5em;
+  font-family: 'Kiwi Maru', serif;  
+  color:#000066; 
+}
+
+.product-box-img {
+  margin: -2em 2em 0 0;
+}
+
+.the-product-name {
+  margin: -1em 1.7em 0 0;
+  font-family: 'RocknRoll One', sans-serif; 
+}
+.the-product-company {
+  margin: 0.4em 9.5em 0 7.5em;
+  font-size: 1em;
+  background-color: rgba(218, 175, 32, 0.87);
+  font-family: 'Kiwi Maru', serif;  
+}
+
+.new-review-main-lists {
+  text-align: center;
+  margin-top: 4em;
+}
+
+.hidden-category {
+  display: none;
+}
+
+/* 各フォーム */
+.review-form-wrap {
+  font-family: 'Kiwi Maru', serif;  
+  margin-bottom: 2em;
+}
+
+.review-text {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.review-input-area1 {
+  width: 26em;
+  height: 4em;
+  margin-top: 1em;
+}
+
+.review-input-area2 {
+  width: 26em;
+  height: 12em;
+  margin-top: 1em;
+}
+
+.entry-btn {
+  text-align: center;
+  font-family: 'Kiwi Maru', serif;
+}
+
+.entry-red-btn {
+  font-family: 'Kiwi Maru', serif;  
+  margin-top: 1em;
+  border: 1px solid #000066;
+  background-color: #000066;
+  padding: 0.5em 9.4em;  
+  font-size: large;
+  color: white;
+}
+.entry-red-btn p {
+  margin: 0; 
+  padding: 0;
+}

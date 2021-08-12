@@ -41,10 +41,7 @@
 .form-group2 {
   margin-top: 1em;
   text-align: center;
-  font-family: 'Kiwi Maru', serif;}
-
-.form-text-wrap2 {
-  /* margin-top: 0.5em; */
+  font-family: 'Kiwi Maru', serif;
 }
 
 .form-text{
@@ -65,7 +62,6 @@
 
 .info-text {
   margin: -0.2em 0 1.8em 0!important;
-
 }
 .register-btn {
   text-align: center;
@@ -117,3 +113,5 @@
   margin: 0; 
   padding: 0;
 }
+
+  
