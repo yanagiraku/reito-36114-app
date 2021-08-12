@@ -1,0 +1,75 @@
+.review-body {
+  background-image:url('https://photoshopvip.net/wp-content/uploads/2012/07/21usefultexture.jpg'); 
+  background-repeat: repeat;
+}
+
+.review-product-content {
+  border: 8px solid #000066;
+  margin: 4em 18em;
+  background-color: Transparent;
+  width: 53em;
+  height: 20em;
+}
+.review-product-content2 {
+  border: 2px solid #000066;
+  margin: 5px;
+  background-color: Transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.review-product-img {
+  width: 18em;
+}
+.review-product-info {
+  margin: 2em 0 2em 1em;
+  width: 29em;
+  height: 15em;
+  color: #000066;
+  background-color: rgb(51, 153, 134, 0.5);
+  text-align: center;
+  display: block;
+  font-family: 'Kiwi Maru', serif;  
+}
+.review-product-name {
+  font-family: 'RocknRoll One', sans-serif;
+  color: #000066;
+  margin: -2em 0 0 2.3em;
+}
+
+.review-product-company {
+  margin-top: 3.1em;
+  font-family: 'Kiwi Maru', serif;  
+  font-size: smaller;
+  background-color: rgba(218, 175, 32, 0.87);
+  color: #000066;
+
+}
+
+.review-product-box {
+  display: flex;
+}
+.review-url {
+  text-decoration: none;
+  color: #000066;
+}
+
+.review-title {
+  font-size: 1.3em;
+  margin-top: 1.5em;
+}
+
+.recommend-score {
+  font-size: 2em;
+  margin-top: 0.3em;
+  color:rgba(218, 175, 32);
+}
+.created_on {
+  font-size: 1.1em;
+  margin-top: 1em;
+}
+
+.review-nickname {
+  font-size: 1.2em;
+  margin: 1.7em 17em 0 0;
+}

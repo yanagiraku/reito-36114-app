@@ -4,7 +4,7 @@
   <% if current_user.id == @review.user_id %>
     <li><%= link_to "編集", edit_product_review_path(id: @review.id, product_id: @review.product.id), method: :get, class: "edit-btn"%></li> 
     <li><%= link_to "削除", product_review_path(id: @review.id, product_id: @review.product.id), method: :delete, class: "delete-btn"%></li> 
-  <%end%>
+  <%end %>
 </ul>
 <div class="review-show">
   <div class="review-product-box">

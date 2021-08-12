@@ -1,18 +1,17 @@
 .product-body {
   background-image:url('https://photoshopvip.net/wp-content/uploads/2012/07/21usefultexture.jpg'); 
   background-repeat: repeat;
-
 }
 .product-content {
   border: 8px solid #000066;
   margin: 4em 23em 2em 23em;
-  background-color: Transparent);
+  background-color: Transparent;
 }
 
 .product-content2 {
   border: 2px solid #000066;
   margin: 5px;
-  background-color: Transparent);
+  background-color: Transparent;
 
 }
 
@@ -42,3 +41,4 @@
   font-size: smaller;
   background-color: rgba(218, 175, 32, 0.87);
 }
+

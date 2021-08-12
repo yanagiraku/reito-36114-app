@@ -15,7 +15,6 @@
 
 .product-title-box {
   display: flex;
-  
 }
 .line-image3 {
   width: 1.9em;
@@ -60,7 +59,7 @@
   color: #000055;
   margin: 1em 0;
   text-align: center;
-border-bottom: dotted 5px #000055;
+  border-bottom: dotted 5px #000055;
 }
 
 .mix-class {
@@ -73,7 +72,7 @@ border-bottom: dotted 5px #000055;
   width: 8.4em;
   margin: 0.5em 0 2em -10px;
 }
-a {
+.product-meat-all {
   text-decoration:none; 
   color: #000055;
   font-size: 1.3em;

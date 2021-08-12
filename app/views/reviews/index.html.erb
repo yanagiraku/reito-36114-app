@@ -1,29 +1,93 @@
-<%= render partial: "shared/header" %>
+<header class='simple-header'>
+  <%= link_to image_tag("reito-icon-blue.png", class:"reito-icon"), "/" %>
+</header>
 
-<h2>口コミ一覧</h2>
-
-
-<div class="three-classes">
-  <h3 class="class-text">お弁当向け</h3>
-  <ul class="mix-class">
-    <li><%= link_to "肉系", meat_reviews_path %></li>
-    <li><%= link_to "魚系", fish_reviews_path %></li>
-    <li><%= link_to "カップ", cup_reviews_path %></li>
-    <li><%= link_to "コロッケ", croquette_reviews_path %></li>
-  </ul>
-  
-  <h3 class="class-text">食卓向け</h3>
-  <ul class="mix-class">
-    <li><%= link_to "米飯", rice_reviews_path %></li>
-    <li><%= link_to "麺類", noodle_reviews_path %></li>
-    <li><%= link_to "お惣菜", side_reviews_path %></li>
-    <li><%= link_to "ピザ", pizza_reviews_path %></li>
-    <li><%= link_to "グラタン・ドリア", gratin_reviews_path %></li>
-  </ul>
-
-  <h3 class="class-text">食材・デザート</h3>
-  <ul class="mix-class">
-    <li><%= link_to "食材", foodstuff_reviews_path %></li>
-    <li><%= link_to "スイーツ", sweets_reviews_path %></li>
-  </ul>
-</div>
+<body class="product-category-lists">
+  <div class="product-title-box">
+    <%=image_tag("line.png", class:"line-image3")%>
+    <h2 class="protuct-title">口コミ一覧</h2>
+  </div>
+  <div class="three-lists">
+    <div class="first-list">
+      <h2 class="class-text">お弁当向け</h2>
+      <div class="mix-class">
+        <div class="meat-list">
+          <%= link_to meat_reviews_path, class:"product-meat-all" do%>
+          <h3 class="category-name">肉系</h3>
+          <%= image_tag("meat.png", class: "meat-image")%>
+          <%end%>
+        </div>
+        <div class="meat-list">
+          <%= link_to fish_reviews_path, class:"product-meat-all"  do%>
+          <h3 class="category-name">魚系</h3>
+          <%= image_tag("fish.png", class: "fish-image")%>
+          <%end%>
+        </div>
+        <div class="meat-list">
+          <%= link_to cup_reviews_path, class:"product-meat-all"  do%>
+          <h3 class="category-name">カップ</h3>
+          <%= image_tag("cup.png", class: "cup-image")%>
+          <%end%>
+        </div>
+        <div class="meat-list">
+          <%= link_to croquette_reviews_path, class:"product-meat-all"  do%>
+          <h3 class="category-name">コロッケ</h3>
+          <%= image_tag("croquette.png", class: "croquette-image")%>
+          <%end%>
+        </div>
+      </div>
+    </div>
+    <div class="second-list">
+      <h2 class="class-text">食卓向け</h2>
+      <div class="mix-class">
+        <div class="meat-list">
+          <%= link_to rice_reviews_path, class:"product-meat-all"  do%>
+          <h3 class="category-name">米飯</h3>
+          <%= image_tag("rice.png", class: "rice-image")%>
+          <%end%>
+        </div>
+        <div class="meat-list">
+          <%= link_to noodle_reviews_path, class:"product-meat-all"  do%>
+          <h3 class="category-name">麺類</h3>
+          <%= image_tag("noodle.png", class: "noodle-image")%>
+          <%end%>
+        </div>
+        <div class="meat-list">
+          <%= link_to side_reviews_path, class:"product-meat-all"  do%>
+          <h3 class="category-name">お惣菜</h3>
+          <%= image_tag("side.png", class: "side-image")%>
+          <%end%>
+        </div>
+        <div class="meat-list">
+          <%= link_to pizza_reviews_path, class:"product-meat-all"  do%>
+          <h3 class="category-name">ピザ</h3>
+          <%= image_tag("pizza.png", class: "pizza-image")%>
+          <%end%>
+        </div>
+        <div class="meat-list">
+          <%= link_to gratin_reviews_path, class:"product-meat-all"  do%>
+          <h3 class="category-name-gratin">グラタン   ・ドリア</h3>
+          <%= image_tag("gratin.png", class: "gratin-image")%>
+          <%end%>
+        </div>
+      </div>
+    </div>
+    <div class="third-list">
+      <h2 class="class-text">食材・デザート</h2>
+      <div class="mix-class">
+        <div class="meat-list">
+          <%= link_to foodstuff_reviews_path, class:"product-meat-all"  do%>
+          <h3 class="category-name">食材</h3>
+          <%= image_tag("foodstuff.png", class: "foodstuff-image")%>
+          <%end%>
+        </div>
+        <div class="meat-list">
+          <%= link_to sweets_reviews_path, class:"product-meat-all"  do%>
+          <h3 class="category-name">スイーツ</h3>
+          <%= image_tag("sweets.png", class: "sweets-image")%>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

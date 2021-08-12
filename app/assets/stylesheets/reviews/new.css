@@ -22,11 +22,11 @@
 }
 
 .the-product-name {
-  margin: -1em 1.7em 0 0;
+  margin: 0.7em 1.7em 0 0;
   font-family: 'RocknRoll One', sans-serif; 
 }
 .the-product-company {
-  margin: 0.4em 9.5em 0 7.5em;
+  margin: 0.4em 11em 0 9em;
   font-size: 1em;
   background-color: rgba(218, 175, 32, 0.87);
   font-family: 'Kiwi Maru', serif;  

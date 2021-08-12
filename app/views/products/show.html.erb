@@ -11,23 +11,25 @@
       <%end%>
     </ul>
     <div class="product-box">
-      <div class="product-img-content">
-        <%= image_tag @product.image ,class:"product-box-img" %>
-      </div>
       <div class="product-name-box">
-        <h3 class="show-canpany"><%= @product.company.name %></h3>
         <h1 class="show-product-name"><%= @product.product_name%></h1>
       </div>
       <div class="product-explain-box">
         <span><%= @product.description %></span>
       </div>
-      <div class="category-block">
-        <div class="detail-value1"><%= "　#{@product.ganre.name}　" %></div>
-        <div class="detail-value2"><%= "　#{@product.category.name}　" %></div>
+      <div class="product-img-content">
+        <%= image_tag @product.image ,class:"product-box-img" %>
+        <h3 class="show-company"><%= @product.company.name %></h3>
       </div>
-      <div class="cooking-method-block">
-        <div class="detail-value3"><%= "　#{@product.cooking_method.name}　" %></div>
-          <div class="detail-value3"><%= "　#{@product.cooking_method2.name}　" %></div>
+      <div class="four-blocks">
+        <div class="category-block">
+          <div class="detail-value1"><%= "　#{@product.ganre.name}　" %></div>
+          <div class="detail-value2"><%= "　#{@product.category.name}　" %></div>
+        </div>
+        <div class="cooking-method-block">
+          <div class="detail-value3"><%= "　#{@product.cooking_method.name}　" %></div>
+            <div class="detail-value3"><%= "　#{@product.cooking_method2.name}　" %></div>
+        </div>
       </div>
       <%= link_to "　≪　#{@product.category.name}をもっと見る", :back,  class: "another-products"%>
     </div>

@@ -86,32 +86,37 @@
 }
 
  .product-name-box {
-   margin-top: -2.7em;
+   display: block;
+   margin-top: -4.5em;
  }
 
 .show-product-name {
   font-family: 'RocknRoll One', sans-serif;  
   font-size: 2.2em;
   color:#000066;
+  margin-top: 3em;
 }
 
-.show-canpany {
+.show-company {
   font-family: 'Kiwi Maru', serif;  
   background-color: rgba(218, 175, 32, 0.87);
-  margin: 0 7em 3em 7em;
+  margin: -2.6em 8em 3em 7em;
+
 }
 
+/* 説明 */
 .product-explain-box {
   font-family: 'RocknRoll One', sans-serif;  
   font-size: larger;
   margin-top: -0.6em;
 }
 
+
 .category-block {
   display: flex;
   justify-content: center;
   font-family: 'Kiwi Maru', serif;  
-  margin-top: 3.5em;
+  margin-top: 5em;
 
 
 }
@@ -120,21 +125,19 @@
   display: flex;
   justify-content: center;
   font-family: 'Kiwi Maru', serif;  
-  margin: 1em 0 0 1em;
+  margin: 1em 0 0 0;
 }
 
 /* ジャンル */
 .detail-value1 {
-  margin-right: 1.4em;
-  /* border: 1px double white; */
   background-color: #003333;
   color: white;
   font-size: larger;
+  margin-right: 1em;
 }
 
 /* カテゴリー */
 .detail-value2 {
-  /* border: 1px double white; */
   background-color: #660000;
   color: white;
   font-size: larger;
@@ -143,18 +146,18 @@
 /* 調理方法 */
 .detail-value3 {
   text-align: center;
-  margin-right: 1em;
-  /* border: 1px double white; */
   background-color: #B8860B;
   color: white;
   font-size: larger;
+  margin-right: 1em;
+
 }
 
 /* 戻る*/
 .another-products {
   font-size: 1.5em;
   font-family: 'RocknRoll One', sans-serif;  
-  margin: 2em 0 0 3em;
+  margin: 3em 0 0 3em;
   color: black;
 }
 

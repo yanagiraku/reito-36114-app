@@ -23,11 +23,13 @@ button, input, select, textarea {
   align-items: center;
   border-bottom: dotted 5px #000055;
   height: 6em;
+
 }
 
-.top-page-body {
+.body {
   background-image:url('https://photoshopvip.net/wp-content/uploads/2012/07/21usefultexture.jpg'); 
   background-repeat: repeat;
+
 }
 
 /* 右側 */
@@ -92,6 +94,11 @@ button, input, select, textarea {
   margin: 0; 
   padding: 0;
 }
+.logout a {
+  text-decoration: none;
+  color: #000066;
+}
+
 /* ログアウト */
 
 
@@ -123,6 +130,11 @@ button, input, select, textarea {
   margin: 0; 
   padding: 0;
 }
+.my-page a {
+  text-decoration: none;
+  color: #000066;
+}
+
 /* マイページ */
 
 
@@ -154,6 +166,11 @@ button, input, select, textarea {
   margin: 0; 
   padding: 0;
 }
+.sign-up a {
+  text-decoration: none;
+  color: #000066;
+}
+
 /* 新規登録 */
 
 /* ログイン */
@@ -163,8 +180,6 @@ button, input, select, textarea {
   padding: 1.2em 1.2em 0 1.2em;
   border-top: solid 3px #000066;
   border-bottom: solid 3px #000066;
-  color:#000066;
-  text-decoration: none;
   font-weight: bold;
   font-size: 1em;
   writing-mode: vertical-rl;
@@ -184,6 +199,11 @@ button, input, select, textarea {
   margin: 0; 
   padding: 0;
 }
+.log-in a {
+  text-decoration: none;
+  color: #000066;
+}
+
 /* ログイン */
 
 
@@ -198,16 +218,16 @@ button, input, select, textarea {
 
 /* 商品一覧 */
 .product-category-btn {
-  width: 8em;
+  width: 11em;
   margin: 0 1.5em 0 1.5em;
 }
 
 /* 口コミ一覧 */
 .review-category-btn {
-  width: 8em;
+  width: 11em;
 }
 
 /* ランキング一覧 */
 .ranking-btn {
-  width: 10em;
+  width: 11em;
 }
