@@ -16,6 +16,7 @@
   list-style: none;
   font-family: 'RocknRoll One', sans-serif;  
   font-size: 1.5em;
+
 }
  
 .edit-btn {
@@ -26,7 +27,6 @@
   border-bottom: solid 3px #000066;
   color:#000066;
   text-decoration: none;
-  font-weight: bold;
   writing-mode: vertical-rl;
 }
 .edit-btn:before, .edit-btn:after{
@@ -54,8 +54,9 @@
   border-bottom: solid 3px #000066;
   color:#000066;
   text-decoration: none;
-  font-weight: bold;
   writing-mode: vertical-rl;
+  font-weight: lighter;
+
 }
 .delete-btn:before, .delete-btn:after{
   content: '';

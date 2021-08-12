@@ -3,6 +3,7 @@
 
 .header,.footer {
 position: relative;
+
 }
 
 
@@ -12,7 +13,7 @@ button, input, select, textarea {
   font-size   : 100%;
 }
 
-.top-page {
+.top-page-header {
   font-family: 'RocknRoll One', sans-serif;  
 }
 
@@ -23,13 +24,13 @@ button, input, select, textarea {
   align-items: center;
   border-bottom: dotted 5px #000055;
   height: 6em;
-
+  margin-top: -1em;
+  width:100vw;
 }
 
-.body {
+.top-page-body {
   background-image:url('https://photoshopvip.net/wp-content/uploads/2012/07/21usefultexture.jpg'); 
   background-repeat: repeat;
-
 }
 
 /* 右側 */
@@ -230,4 +231,10 @@ button, input, select, textarea {
 /* ランキング一覧 */
 .ranking-btn {
   width: 11em;
+}
+
+.top-page-footer {
+  width: 100vw;
+  height: 20vh;
+  margin: -1em -0.6em 0 0;
 }
