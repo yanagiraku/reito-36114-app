@@ -1,0 +1,44 @@
+.product-body {
+  background-image:url('https://photoshopvip.net/wp-content/uploads/2012/07/21usefultexture.jpg'); 
+  background-repeat: repeat;
+
+}
+.product-content {
+  border: 8px solid #000066;
+  margin: 4em 23em 2em 23em;
+  background-color: Transparent);
+}
+
+.product-content2 {
+  border: 2px solid #000066;
+  margin: 5px;
+  background-color: Transparent);
+
+}
+
+.product-img {
+  width: 15em;
+  margin-left: 1em;
+}
+
+.product-info {
+  margin: 2em 1em 2em 1em;
+  width: 20em;
+  height: 10em;
+  color: #000066;
+  background-color: rgb(51, 153, 134, 0.5);
+  text-align: center;
+}
+
+
+.product-name {
+  margin-top: 2.5em;
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+.product-company {
+  margin-top: 3.1em;
+  font-family: 'Kiwi Maru', serif;  
+  font-size: smaller;
+  background-color: rgba(218, 175, 32, 0.87);
+}

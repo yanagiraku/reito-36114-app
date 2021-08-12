@@ -1,19 +1,24 @@
-<%= render partial: "shared/header" %>
+<header class='simple-header'>
+  <%= link_to image_tag("reito-icon-blue.png", class:"reito-icon"), "/" %>
+</header>
 
-<% @product1.each do |product| %>
-  <div class='product-content'>
-    <%= link_to product_path(product.id) do %>
-    <%= image_tag product.image, class: "product-img" %>
-    <div class='product-info'>
-      <h3 class='product-name'>
-        <%= product.product_name %>
-      </h3>
-      <div class='product-company'>
-        <span><%= product.company.name %></span>
+<body class="product-body">
+  <% @product1.each do |product| %>
+    <div class="product-content">
+      <div class='product-content2'>
+        <%= link_to product_path(product.id) do %>
+        <%= image_tag product.image, class: "product-img" %>
+        <div class='product-info'>
+          <h3 class='product-name'>
+            <%= product.product_name %>
+          </h3>
+          <div class='product-company'>
+            <span><%= product.company.name %></span>
+          </div>
+        </div>
+        <%end %>
       </div>
     </div>
-    <%end %>
-  </div>
-<%end%>
-
+  <%end%>
+</body>
 
