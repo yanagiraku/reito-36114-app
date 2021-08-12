@@ -2,7 +2,6 @@
   background-image:url('https://photoshopvip.net/wp-content/uploads/2012/07/21usefultexture.jpg'); 
   background-repeat: repeat;
   position: relative;
-
 }
 
 .registration-second-lists {
@@ -26,10 +25,10 @@
   margin-right: 1.5em;
 }
 
-.line-image {
+.line-image2 {
   width: 1.9em;
   height: 2.6em;
-  margin: 2.1em 0 0 0;
+  margin-top: 2em;
 }
 .registration-title {
   color: #000066;

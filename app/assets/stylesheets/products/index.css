@@ -8,15 +8,19 @@
   font-family: 'RocknRoll One', sans-serif;  
 
 }
+.product-category-lists {
+  background-image:url('https://photoshopvip.net/wp-content/uploads/2012/07/21usefultexture.jpg'); 
+  background-repeat: repeat;
+}
 
 .product-title-box {
   display: flex;
   
 }
-.line-image {
+.line-image3 {
   width: 1.9em;
   height: 2.6em;
-  margin-left: 1em;
+  margin: 0 0 0.5em 1em;
 }
 
 .product-category-list {
