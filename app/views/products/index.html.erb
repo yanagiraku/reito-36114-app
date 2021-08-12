@@ -1,11 +1,11 @@
 <header class='product-category-page-header'>
   <%= link_to image_tag("reito-icon-blue.png", class:"reito-icon"), "/" %>
-  <%= link_to "商品登録", "/products/new", class: "product-registration"%>
 </header>
+
 
 <body class="product-category-lists">
   <div class="product-title-box">
-    <%=image_tag("line.png", class:"line-image")%>
+    <%=image_tag("line.png", class:"line-image3")%>
     <h2 class="protuct-title">商品一覧</h2>
   </div>
   <div class="three-lists">
@@ -13,25 +13,25 @@
       <h2 class="class-text">お弁当向け</h2>
       <div class="mix-class">
         <div class="meat-list">
-          <%= link_to meat_products_path do%>
+          <%= link_to meat_products_path, class:"product-meat-all" do%>
           <h3 class="category-name">肉系</h3>
           <%= image_tag("meat.png", class: "meat-image")%>
           <%end%>
         </div>
         <div class="meat-list">
-          <%= link_to fish_products_path do%>
+          <%= link_to fish_products_path, class:"product-meat-all" do%>
           <h3 class="category-name">魚系</h3>
           <%= image_tag("fish.png", class: "fish-image")%>
           <%end%>
         </div>
         <div class="meat-list">
-          <%= link_to cup_products_path do%>
+          <%= link_to cup_products_path, class:"product-meat-all" do%>
           <h3 class="category-name">カップ</h3>
           <%= image_tag("cup.png", class: "cup-image")%>
           <%end%>
         </div>
         <div class="meat-list">
-          <%= link_to croquette_products_path do%>
+          <%= link_to croquette_products_path, class:"product-meat-all" do%>
           <h3 class="category-name">コロッケ</h3>
           <%= image_tag("croquette.png", class: "croquette-image")%>
           <%end%>
@@ -42,31 +42,31 @@
       <h2 class="class-text">食卓向け</h2>
       <div class="mix-class">
         <div class="meat-list">
-          <%= link_to rice_products_path do%>
+          <%= link_to rice_products_path, class:"product-meat-all" do%>
           <h3 class="category-name">米飯</h3>
           <%= image_tag("rice.png", class: "rice-image")%>
           <%end%>
         </div>
         <div class="meat-list">
-          <%= link_to noodle_products_path do%>
+          <%= link_to noodle_products_path, class:"product-meat-all" do%>
           <h3 class="category-name">麺類</h3>
           <%= image_tag("noodle.png", class: "noodle-image")%>
           <%end%>
         </div>
         <div class="meat-list">
-          <%= link_to side_products_path do%>
+          <%= link_to side_products_path, class:"product-meat-all" do%>
           <h3 class="category-name">お惣菜</h3>
           <%= image_tag("side.png", class: "side-image")%>
           <%end%>
         </div>
         <div class="meat-list">
-          <%= link_to pizza_products_path do%>
+          <%= link_to pizza_products_path, class:"product-meat-all" do%>
           <h3 class="category-name">ピザ</h3>
           <%= image_tag("pizza.png", class: "pizza-image")%>
           <%end%>
         </div>
         <div class="meat-list">
-          <%= link_to gratin_products_path do%>
+          <%= link_to gratin_products_path, class:"product-meat-all" do%>
           <h3 class="category-name-gratin">グラタン   ・ドリア</h3>
           <%= image_tag("gratin.png", class: "gratin-image")%>
           <%end%>
@@ -77,15 +77,16 @@
       <h2 class="class-text">食材・デザート</h2>
       <div class="mix-class">
         <div class="meat-list">
-          <%= link_to foodstuff_products_path do%>
+          <%= link_to foodstuff_products_path, class:"product-meat-all" do%>
           <h3 class="category-name">食材</h3>
           <%= image_tag("foodstuff.png", class: "foodstuff-image")%>
           <%end%>
         </div>
         <div class="meat-list">
-          <%= link_to sweets_products_path do%>
+          <%= link_to sweets_products_path, class:"product-meat-all" do%>
           <h3 class="category-name">スイーツ</h3>
           <%= image_tag("sweets.png", class: "sweets-image")%>
+          <%= link_to image_tag("touroku.png", class: "product-registration"), "/products/new"%>
           <%end%>
         </div>
       </div>

@@ -1,24 +1,30 @@
-<%= render partial: "shared/header" %>
+<header class='simple-header'>
+  <%= link_to image_tag("reito-icon-blue.png", class:"reito-icon"), "/" %>
+</header>
 
-<h2>肉系</h2>
-
-<% @review1.each do |review| %>
-  <div class='review-content'>
-    <%= link_to product_review_path(id: review.id, product_id: review.product.id) do%>
-    <%= image_tag review.product.image, class: "product-img" %>
-    <div class='product-info'>
-      <h3 class='product-name'>
-        <%= review.product.product_name %>
-      </h3>
+<body class="review-body">
+  <% @review1.each do |review| %>
+    <div class='review-product-content'>
+      <div class='review-product-content2'>
+        <div class="review-product-box">
+        <%= link_to product_review_path(id: review.id, product_id: review.product.id), class: "review-url" do%>
+          <%= image_tag review.product.image, class: "review-product-img" %>
+          <h3 class='review-product-name'><%= review.product.product_name %></h3>
+        </div>
+        <div class='review-product-info'>
+          <div class="review-title"><%="『　#{review.title}　』"%></div>
+          <div class="recommend-score"><%=review.recommend_score.name%></div>
+        <%end%>
+          <div class="created_on"><%="🕘#{review.created_on}"%></div>
+          <div class="review-nickname"><%="by#{review.user.nickname}"%></div>
+        </div>
+      </div>
     </div>
-    <ul class="review-info">
-      <li><%=review.title%></li>
-      <li><%=review.recommend_score.name%></li>
-    <%end%>
-      <li><%="by#{review.user.nickname}"%></li>
-      <li><%=review.created_on%></li>
-    </ul>
-  </div>
-<%end%>
+  <%end%>
+</body>
+
+
+
+
 
 

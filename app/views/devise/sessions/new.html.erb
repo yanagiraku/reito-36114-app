@@ -1,35 +1,34 @@
 <header class='simple-header'>
-  <%= link_to image_tag("reito-app-icon.png", class:"reito-icon"), "/" %>
+  <%= link_to image_tag("reito-icon-blue.png", class:"reito-icon"), "/" %>
 </header>
 
-<div class="session-lists">
-  <div class="session-title-box">
-    <%=image_tag("line.png", class:"line-image")%>
-    <h2 class="session-title">ログイン</h2>
-  </div>
-  <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'registration-main', local: true do |f| %>
-  <div class='form-wrap'>
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label class="form-text">メールアドレス</label>
-        <span class="indispensable">必須</span>
+<body class="session-lists">
+  <div class="session-second-lists">
+    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'registration-main', local: true do |f| %>
+      <div class='form-wrap'>
+        <%=image_tag("line.png", class:"line-image")%>
+        <h2 class="session-title">ログイン</h2>
       </div>
-      <%= f.email_field :email, class:"input-form", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
-    </div>
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label class="form-text">パスワード</label>
-        <span class="indispensable">必須</span>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">メールアドレス</label>
+        </div>
+        <%= f.email_field :email, class:"input-form", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
       </div>
-      <%= f.password_field :password, class:"input-form", id:"password", placeholder:"" %>
-    </div>
-    <div class='login-btn'>
-      <%= f.submit "ログイン" , class:"login-red-btn" %>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">パスワード</label>
+        </div>
+        <%= f.password_field :password, class:"input-form", id:"password", placeholder:"6文字以上の半角英数字" %>
+      </div>
+      <div class='login-btn'>
+        <%= f.submit "ログイン" , class:"login-red-btn" %>
+      </div>
+    <% end %>
+    <div class="sign-up-group">
+      <%=link_to "新規登録",new_user_registration_path, class: "sign-up-second"%>
     </div>
   </div>
-  <% end %>
-  <%=link_to "新規登録",new_user_registration_path, class: "sign-up"%>
-</div>
+</body>
 
-<%= render "devise/shared/links" %>
 

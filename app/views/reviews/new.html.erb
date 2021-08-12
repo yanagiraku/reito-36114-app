@@ -1,42 +1,55 @@
-<%= render partial: "shared/header" %>
+<header class='simple-header'>
+  <%= link_to image_tag("reito-icon-blue.png", class:"reito-icon"), "/" %>
+</header>
 
-<h2>口コミ投稿</h2>
-
-  <div class="product-box">
-    <div class="product-img-content">
-      <%= image_tag @product.image ,class:"product-box-img" %>
+<body class="new-review-lists">
+  <div class="new-review-second-lists">
+    <div class="product-show">
+      <div class='form-wrap2'>
+        <%=image_tag("line.png", class:"line-image2")%>
+        <h1 class='new-review-title'>口コミ投稿</h1>
+      </div>
+      <div class="product-box">
+        <div class="product-img-content">
+          <%= image_tag @product.image ,class:"product-box-img" %>
+        </div>
+        <div class="product-name-box">
+          <h2 class="the-product-name"><%= @product.product_name %></h2>
+          <h3 class="the-product-company"><%= @product.company.name %></h3>
+        </div>
+      </div>
     </div>
-    <div class="product-name-box">
-      <%= @product.product_name %>
-      <%= @product.company.name %>
+    <div class="new-review-main-lists">
+      <%= form_with(model: [@product, @review], url: product_reviews_path(@product), class: "review-main", local: true) do |f|%>
+        <div class="hidden-category">
+          <%= f.collection_select(:category_id, Category.all, :id, :name,{selected: @product.category_id},{class:"select-box-hidden", id:"category_id"})%>
+        </div>
+        <div class="review-form-wrap">
+          <div class="review-text-wrap">
+            <label class="review-text">タイトル</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :title, class:"review-input-area1", id:"title",placeholder:"お弁当のお惣菜ならこれが”イチオシ”"%>
+        </div>
+        <div class="review-form-wrap">
+          <div class="review-text-wrap">
+            <label class="review-text">コメント</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :comment, class:"review-input-area2", id:"comment", placeholder:"お弁当のちょっとした隙間を埋めるのに便利！自然解凍なのでそのままお弁当箱に詰められて楽！"%>
+        </div>
+        <div class="review-form-wrap">
+          <div class="review-text-wrap">
+            <label class="review-text">おすすめ度</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:recommend_score_id, RecommendScore.all, :id, :name, {class:"review-select-box", id:"recommend_score"})%>
+        </div>
+
+        <div class="entry-btn-contents">
+          <%= f.submit "登録する" ,class:"entry-red-btn" %>
+        </div>
+      <%end%>
     </div>
   </div>
-
-<%= form_with(model: [@product, @review], url: product_reviews_path(@product), class: "review-main", local: true) do |f|%>
-<div class="hidden-category">
-  <%= f.collection_select(:category_id, Category.all, :id, :name,{selected: @product.category_id},{class:"select-box", id:"category_id"})%>
-</div>
-<div class="review-form">
-  <div class="review-text-wrap">
-    <label class="review-text">タイトル</label>
-    <span class="indispensable">必須</span>
-  </div>
-  <%= f.text_area :title, class:"input-area", id:"title",placeholder:"お弁当のお惣菜ならこれが”イチオシ”"%>
-
-  <div class="review-text-wrap">
-    <label class="review-text">おすすめ度</label>
-    <span class="indispensable">必須</span>
-  </div>
-  <%= f.collection_select(:recommend_score_id, RecommendScore.all, :id, :name, {class:"select-box", id:"recommend_score"})%>
-
-  <div class="review-text-wrap">
-    <label class="review-text">コメント</label>
-    <span class="indispensable">必須</span>
-  </div>
-  <%= f.text_area :comment, class:"input-area", id:"comment", placeholder:"お弁当のちょっとした隙間を埋めるのに便利！自然解凍なのでそのままお弁当箱に詰められて楽！"%>
-
-  <div class="entry-btn-contents">
-    <%= f.submit "登録する" ,class:"entry-btn" %>
-  </div>
-</div>
-<%end%>
+</body>
