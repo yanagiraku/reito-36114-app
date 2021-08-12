@@ -12,16 +12,21 @@
   border: 2px solid #000066;
   margin: 5px;
   background-color: Transparent;
+}
+.product-url {
+  display: flex;
+  text-decoration: none;
+  color: #000066;
 
 }
 
 .product-img {
-  width: 15em;
+  width: 17em;
   margin-left: 1em;
 }
 
 .product-info {
-  margin: 2em 1em 2em 1em;
+  margin: 2.5em 0 2em 1.7em;
   width: 20em;
   height: 10em;
   color: #000066;
@@ -31,14 +36,15 @@
 
 
 .product-name {
-  margin-top: 2.5em;
+  margin-top: 1.6em;
+  font-size: 1.5em;
   font-family: 'RocknRoll One', sans-serif;
 }
 
 .product-company {
-  margin-top: 3.1em;
+  margin-top: 2.3em;
   font-family: 'Kiwi Maru', serif;  
-  font-size: smaller;
+  font-size: 1em;
   background-color: rgba(218, 175, 32, 0.87);
 }
 

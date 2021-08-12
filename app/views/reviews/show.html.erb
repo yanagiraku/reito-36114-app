@@ -1,25 +1,32 @@
-<%= render partial: "shared/header" %>
+<header class='simple-header'>
+  <%= link_to image_tag("reito-icon-blue.png", class:"reito-icon"), "/" %>
+</header>
 
-<ul class ="change-btn">
-  <% if current_user.id == @review.user_id %>
-    <li><%= link_to "編集", edit_product_review_path(id: @review.id, product_id: @review.product.id), method: :get, class: "edit-btn"%></li> 
-    <li><%= link_to "削除", product_review_path(id: @review.id, product_id: @review.product.id), method: :delete, class: "delete-btn"%></li> 
-  <%end %>
-</ul>
-<div class="review-show">
-  <div class="review-product-box">
-    <%= image_tag @review.product.image, class: "review-box-image" %>
-    <ul class="product-imformation">
-      <li><%= @review.product.product_name %></li>
-      <li><%= @review.product.company.name %></li>
+<body class="review-show">
+  <div class="review-all">
+    <ul class ="change-btn2">
+      <% if current_user.id == @review.user_id %>
+        <li><%= link_to "編集", edit_product_review_path(id: @review.id, product_id: @review.product.id), method: :get, class: "edit-btn2"%></li> 
+        <li><%= link_to "削除", product_review_path(id: @review.id, product_id: @review.product.id), method: :delete, class: "delete-btn2"%></li> 
+      <%end %>
     </ul>
+    <div class="review-center">
+      <div class="review-show">
+        <div class="review-product-box">
+          <div class="review-value1"><%= @review.product.product_name %></div>
+          <%= image_tag @review.product.image, class: "review-box-image" %>
+          <div class="review-value2"><%= "　#{@review.product.company.name}　" %></div>
+        </div>
+        <div class="review-box">
+          <ul class="review-imformation">
+            <li class="review-value3"><%= "『　#{@review.title}　』" %></li>
+            <li class="review-value4"><%= @review.recommend_score.name %></li>
+            <li class="review-value5"><%="🕘#{@review.created_on}"%></li>
+            <li class="review-value6"><%= @review.comment %></li>
+            <li class="review-value7"><%= "by　#{@review.user.nickname}"%></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="review-box">
-    <ul class="review-imformation">
-      <li><%= @review.title %></li>
-      <li><%= @review.user.nickname%></li>
-      <li><%= @review.recommend_score.name %></li>
-      <li><%= @review.comment %></li>
-    </ul>
-  </div>
-</div>
+</body>
