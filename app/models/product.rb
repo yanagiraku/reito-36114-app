@@ -4,7 +4,6 @@ class Product < ApplicationRecord
   
   with_options presence: true do
     validates :product_name
-    validates :product_num,           format: { with: /\A[0-9]+\z/ }
     validates :description
   end
 

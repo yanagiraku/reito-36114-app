@@ -1,6 +1,5 @@
 <header class='product-category-page-header'>
   <%= link_to image_tag("reito-icon-blue.png", class:"reito-icon"), "/" %>
-  <%= link_to "商品登録", "/products/new", class: "product-registration"%>
 </header>
 
 <body class="product-category-lists">
@@ -86,6 +85,7 @@
           <%= link_to sweets_products_path do%>
           <h3 class="category-name">スイーツ</h3>
           <%= image_tag("sweets.png", class: "sweets-image")%>
+          <%= link_to image_tag("shouhinitiran.png", class: "product-registration"), "/products/new"%>
           <%end%>
         </div>
       </div>
