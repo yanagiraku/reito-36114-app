@@ -3,6 +3,7 @@
     <%= image_tag("reito-icon-blue.png", class:"reito-icon") %>
   </header>
   <body class="top-page-body">
+    <div class="back-image">
       <ul class=list-right>
         <% if user_signed_in? %>
           <li class="logout"><%= link_to'ログアウト', destroy_user_session_path, method: :delete %></li>
@@ -12,12 +13,18 @@
           <li class="sign-up" ><%= link_to'新規登録　', new_user_registration_path %></li>
         <%end%>
       </ul>
-    <div class="center-image">
-      <%=image_tag("yuubin-tegami.png", class:"reito-image")%>
-      <div class="reito-app-description">
-        <p class="reito-app-detail">
-
-        </p>
+      <div class="center-image">
+        <div class="reito-app-description">
+          <p class="reito-app-detail1">
+            驚きと発見を
+          </p>
+          <p class="reito-app-detail2">
+            毎日の食事に
+          </p>
+          <p class="reito-app-detail3">
+            冷凍食品で
+          </p>
+        </div>
       </div>
     </div>
   </body>

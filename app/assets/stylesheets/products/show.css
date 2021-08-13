@@ -7,7 +7,8 @@
 .product-all {
   display: flex;
   justify-content: space-between;
-  height: 45em;
+  height: 50em;
+  margin-right: 10em;
 }
 
 .change-btn {
@@ -77,9 +78,9 @@
 
 
 /* 画像 */
-.product-box-img {
+.product-box-img2 {
   width: 22em;
-  margin-top: -1.5em;
+  margin: -1.5em 0 0 10em;
 }
 
 .product-box {
@@ -96,13 +97,14 @@
   font-family: 'RocknRoll One', sans-serif;  
   font-size: 2.2em;
   color:#000066;
-  margin-top: 3em;
+  margin: 3em 0 1.3em 3.5em;
 }
 
 .show-company {
   font-family: 'Kiwi Maru', serif;  
   background-color: rgba(218, 175, 32, 0.87);
-  margin: -2.6em 8em 3em 7em;
+  width: 10em;
+  margin: -2.6em 10em 3em 19em;
 
 }
 
@@ -110,7 +112,8 @@
 .product-explain-box {
   font-family: 'RocknRoll One', sans-serif;  
   font-size: larger;
-  margin-top: -0.6em;
+  margin: -0.6em 0 0 9em;
+  width: 30em;
 }
 
 
@@ -118,7 +121,7 @@
   display: flex;
   justify-content: center;
   font-family: 'Kiwi Maru', serif;  
-  margin-top: 5em;
+  margin: 3em 0 0 10em;
 
 
 }
@@ -127,7 +130,7 @@
   display: flex;
   justify-content: center;
   font-family: 'Kiwi Maru', serif;  
-  margin: 1em 0 0 0;
+  margin: 1em 0 0 11em;
 }
 
 /* ジャンル */
@@ -152,7 +155,7 @@
   color: white;
   font-size: larger;
   margin-right: 1em;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 
 }
 
@@ -162,13 +165,12 @@
   font-family: 'RocknRoll One', sans-serif;  
   color: black;
   text-decoration: none;
-  margin-right: 2.5em;
+  margin-left: 4.5em;
 }
 
 .review-box {
-  margin-right: 2.6em;
 }
 .review-img-btn {
   width:13em;
-  margin: 34em 1em 0 0;
+  margin: 33em 0 0 7em;
 }
