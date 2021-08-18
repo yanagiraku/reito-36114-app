@@ -26,7 +26,7 @@
   width: 29em;
   height: 15em;
   color: #000066;
-  background-color: rgb(51, 153, 134, 0.5);
+  background-color: rgba(51, 153, 134, 0.5);
   text-align: center;
   display: block;
   font-family: 'Kiwi Maru', serif;  
@@ -62,7 +62,7 @@
 .recommend-score {
   font-size: 2em;
   margin-top: 0.3em;
-  color:rgba(218, 175, 32);
+  color:rgb(218, 175, 32);
 }
 .created_on {
   font-size: 1.1em;
