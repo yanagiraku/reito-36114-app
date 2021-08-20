@@ -1,6 +1,6 @@
-User.create!(nickname:  "管理者",
-  email: "akai@sherlock.jp",
-  password:  "shuichi4869",
-  password_confirmation: "shuichi4869",
+User.create!(nickname:  "管理人",
+  email: "amuro@gmail.com",
+  password:  "toru4869",
+  password_confirmation: "toru4869",
   age: "20",
   admin: true)
