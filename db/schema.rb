@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_08_05_034210) do
     t.integer "category_id", null: false
     t.integer "company_id", null: false
     t.integer "cooking_method_id", null: false
-    t.integer "cooking_method2_id"
+    t.integer "cooking_method2_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
